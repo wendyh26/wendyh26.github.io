@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Interests — Wendy Huang</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    #interests-hero {
+      min-height: 80vh;
+      display: flex;
+      align-items: center;
+      padding-top: calc(var(--nav-h) + 4rem);
+      padding-bottom: 4rem;
+      background: var(--accent-light);
+    }
+    .interests-hero-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+      width: 100%;
+    }
+    .interests-hero-left .section-label { margin-bottom: 0.5rem; }
+    .interests-hero-left p { margin-top: 0; }
+    .interests-tagline {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-style: italic;
+      font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+      font-weight: 700;
+      line-height: 1.3;
+      color: var(--text);
+      margin-bottom: 1.25rem;
+      padding-left: 1.25rem;
+      border-left: 3px solid var(--accent);
+    }
+    .spline-wrap {
+      width: 100%;
+      height: 480px;
+      border-radius: 24px;
+      overflow: hidden;
+      background: linear-gradient(135deg, var(--accent-light) 0%, #E8D8C8 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+    .spline-wrap spline-viewer {
+      width: 100%;
+      height: 100%;
+    }
+    .spline-placeholder-msg {
+      text-align: center;
+      color: var(--accent);
+      font-size: 0.85rem;
+      line-height: 1.7;
+      padding: 2rem;
+    }
+    .spline-placeholder-msg strong { display: block; font-size: 1rem; margin-bottom: 0.5rem; }
+    @media (max-width: 768px) {
+      .interests-hero-grid { grid-template-columns: 1fr; }
+      .spline-wrap { height: 340px; }
+    }
+
+    /* Map */
+    #travel-map { background: var(--bg-card); }
+    #chartdiv {
+      width: 100%;
+      height: 480px;
+      border-radius: 16px;
+      overflow: hidden;
+      margin-top: 1.5rem;
+    }
+    .map-legend {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-size: 0.83rem;
+      color: var(--text-muted);
+      margin-top: 0.25rem;
+    }
+    .legend-dot {
+      width: 12px; height: 12px;
+      border-radius: 50%;
+      background: var(--accent);
+      flex-shrink: 0;
+    }
+    @media (max-width: 768px) { #chartdiv { height: 300px; } }
+  </style>
+</head>
+<body>
+
+<!-- ===== NAV ===== -->
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">Wendy Huang</a>
+    <ul class="nav-links">
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="index.html#education">Education</a></li>
+      <li><a href="index.html#experience">Experience</a></li>
+      <li><a href="index.html#projects">Projects</a></li>
+      <li><a href="index.html#skills">Skills</a></li>
+      <li><a href="index.html#publications">Publications</a></li>
+      <li><a href="interests.html" class="active">Interests</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+    </ul>
+    <button class="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- ===== HERO ===== -->
+<section id="interests-hero">
+  <div class="container">
+    <div class="interests-hero-grid">
+
+      <div class="interests-hero-left">
+        <p class="section-label">Beyond the Code</p>
+        <p class="interests-tagline">I am a photographer, artist, traveler, hiker, chef, and diver.</p>
+        <p>I have many personal hobbies.</p>
+      </div>
+
+      <div class="interests-hero-right">
+        <div class="spline-wrap">
+          <iframe src="https://my.spline.design/alinaavatarpersoncharacter-FYtA8xYUNYUpXHyqPdVs2YuN/" frameborder="0" width="100%" height="100%" title="3D character"></iframe>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== WORLD MAP ===== -->
+<section id="travel-map">
+  <div class="container">
+    <div class="section-header fade-up">
+      <p class="section-label">Places I've Been</p>
+      <h2>Around the World</h2>
+      </div>
+    <div id="chartdiv" class="fade-up"></div>
+  </div>
+</section>
+
+<!-- ===== INTERESTS GRID ===== -->
+<section id="interests" style="background: var(--bg);">
+  <div class="container">
+    <div class="interests-grid">
+
+      <div class="interest-card fade-up">
+        <div class="interest-icon">📷</div>
+        <h3>Photography</h3>
+      </div>
+
+      <div class="interest-card fade-up">
+        <div class="interest-icon">🎨</div>
+        <h3>Visual Arts</h3>
+      </div>
+
+      <div class="interest-card fade-up">
+        <div class="interest-icon">✈️</div>
+        <h3>Traveling</h3>
+      </div>
+
+      <div class="interest-card fade-up">
+        <div class="interest-icon">🥾</div>
+        <h3>Hiking</h3>
+      </div>
+
+      <div class="interest-card fade-up">
+        <div class="interest-icon">🍳</div>
+        <h3>Cooking</h3>
+      </div>
+
+      <div class="interest-card fade-up">
+        <div class="interest-icon">🤿</div>
+        <h3>Diving</h3>
+      </div>
+
+    </div>
+
+    <div class="page-nav" style="margin-top: 4rem;">
+      <a href="gallery.html" class="page-btn secondary">Photography Gallery →</a>
+      <a href="index.html" class="page-btn secondary">← Back Home</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="container">
+    <p>© 2026 Wendy Huang</p>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+
+<!-- amCharts 5 world map -->
+<script src="https://cdn.amcharts.com/lib/5/index.js"></script>
+<script src="https://cdn.amcharts.com/lib/5/map.js"></script>
+<script src="https://cdn.amcharts.com/lib/5/geodata/worldLow.js"></script>
+<script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
+<script>
+  var root = am5.Root.new("chartdiv");
+  root.setThemes([am5themes_Animated.new(root)]);
+
+  var chart = root.container.children.push(
+    am5map.MapChart.new(root, {
+      projection: am5map.geoNaturalEarth1(),
+      panX: "translateX",
+      panY: "translateY",
+      wheelY: "none"
+    })
+  );
+
+  // Hide zoom / home control
+  chart.set("zoomControl", am5map.ZoomControl.new(root, { visible: false }));
+
+  // Background (ocean)
+  chart.chartContainer.get("background").setAll({
+    fill: am5.color(0xF4EDE4),
+    fillOpacity: 1
+  });
+
+  var polygonSeries = chart.series.push(
+    am5map.MapPolygonSeries.new(root, {
+      geoJSON: am5geodata_worldLow,
+      exclude: ["AQ"]
+    })
+  );
+
+  polygonSeries.mapPolygons.template.setAll({
+    tooltipText: "{name}",
+    interactive: true,
+    fill: am5.color(0xE6DDD3),
+    stroke: am5.color(0xF8F5F1),
+    strokeWidth: 0.8
+  });
+
+  polygonSeries.mapPolygons.template.states.create("hover", {
+    fill: am5.color(0xD4B896)
+  });
+
+  var visited = ["US", "CA", "MX", "ES", "CN", "PH", "HK", "TW", "JP", "KR"];
+
+  polygonSeries.events.on("datavalidated", function () {
+    polygonSeries.mapPolygons.each(function (polygon) {
+      if (visited.indexOf(polygon.dataItem.get("id")) !== -1) {
+        polygon.setAll({ fill: am5.color(0xB8956A) });
+      }
+    });
+  });
+
+</script>
+</body>
+</html>
