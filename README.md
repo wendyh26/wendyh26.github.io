@@ -1,8 +1,6 @@
-# Wendy Huang — Personal Website
+# Wendy Huang's Personal Website
 
-Welcome to my personal website designed by Claude Code!
-
-- Static personal site built with vanilla HTML, CSS, and JS.
+Welcome to my personal website designed by Claude Code! This is a static personal site built with vanilla HTML, CSS, and JS.
 
 ## Pages
 
