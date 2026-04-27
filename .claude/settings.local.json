@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mv \"_MG_5658.jpg\"  \"01.jpg\")",
+      "Bash(mv \"DSCF0723.jpg\"  \"02.jpg\")",
+      "Bash(mv \"_MG_5670.jpg\"  \"03.jpg\")",
+      "Bash(mv \"_MG_5697.jpg\"  \"04.jpg\")",
+      "Bash(mv \"IMG_0610.jpg\"  \"05.jpg\")"
+    ]
+  }
+}
